@@ -120,9 +120,13 @@
                 date: $("#date").val(),
                 images: []
             }
-            $.post(`http://${SERVER}/create-event`, message);
+            postEvent(JSON.stringify(message))
         })
     })
+
+    function postEvent(message) {
+        $.post(`http://${SERVER}/create-event`, message);
+    }
 
     
 
