@@ -110,10 +110,7 @@
 <script>
 
     const SERVER = '35.239.118.105:4200'
-    var socket = io();
-    socket.on('connect', function() {
-        socket.emit('initial-connect', 'A message client connected!');
-    });
+
 
     $(() => {
         $("#send").click(()=>{
